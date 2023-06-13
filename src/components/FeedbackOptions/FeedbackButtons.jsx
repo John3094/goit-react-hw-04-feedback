@@ -10,15 +10,11 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           type="button"
           onClick={() => onLeaveFeedback(option)}
         >
-          {option.charAt(0) + option.slice(1)}
+          {option}
         </Button>
       ))}
     </FeedbackButtons>
   );
-};
-
-FeedbackOptions.propTypes = {
-  options: PropTypes.array.isRequired,
 };
 
 FeedbackOptions.propTypes = {
