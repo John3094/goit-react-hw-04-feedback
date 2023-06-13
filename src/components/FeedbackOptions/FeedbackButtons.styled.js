@@ -15,4 +15,5 @@ export const Button = styled.button`
   margin: auto;
   border: 1px solid #888888;
   cursor: pointer;
+  text-transform: capitalize;
 `;

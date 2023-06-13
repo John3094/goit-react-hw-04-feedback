@@ -10,7 +10,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           type="button"
           onClick={() => onLeaveFeedback(option)}
         >
-          {option.charAt(0).toUpperCase() + option.slice(1)}
+          {option.charAt(0) + option.slice(1)}
         </Button>
       ))}
     </FeedbackButtons>
@@ -19,4 +19,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 
 FeedbackOptions.propTypes = {
   options: PropTypes.array.isRequired,
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
